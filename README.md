@@ -23,7 +23,7 @@ Os passos abaixo foram seguidos na prepação dos dados:
 
 Evolução da detecção focando na classe de fraude (Classe 1):
 
-| Modelo | Recall | Precisão | F1-Score | Observação Tática |
+| Modelo | Recall | Precisão | F1-Score | Observação |
 | --- | --- | --- | --- | --- |
 | **Regressão Logística** | 64% | 86% | 0.73 | Nosso modelo *baseline*. As curvas ROC e Precision-Recall mostraram que ele perde precisão muito rápido se tentarmos forçar a detecção de mais fraudes.|
 | **Random Forest** | 80% | 74% | 0.77 | Usamos o parâmetro `class_weight="balanced"`, obrigando o modelo a prestar mais atenção às fraudes. O Recall deu um salto de 16%.|
