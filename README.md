@@ -25,13 +25,10 @@ Evolução da detecção focando na classe de fraude (Classe 1):
 | Modelo | Recall | Precisão | F1-Score | Observação Tática |
 | --- | --- | --- | --- | --- |
 | **Regressão Logística** | 64% | 86% | 0.73 | Nosso modelo *baseline*. As curvas ROC e Precision-Recall mostraram que ele perde precisão muito rápido se tentarmos forçar a detecção de mais fraudes.
-
  |
 | **Random Forest** | 80% | 74% | 0.77 | Usamos o parâmetro `class_weight="balanced"`, obrigando o modelo a prestar mais atenção às fraudes. O Recall deu um salto de 16%.
-
  |
 | **XGBoost** | **78%** | **94%** | **0.85** | O modelo mais robusto. Usamos `scale_pos_weight=10` para penalizar severamente os erros contra fraudes. Entregou o melhor equilíbrio geral.
-
  |
 
 > **Otimização:** Rodamos um `GridSearchCV` no modelo XGBoost para descobrir os melhores hiperparâmetros. O teste revelou que usar 100 árvores (`n_estimators=100`) com profundidade 5 (`max_depth=5`) otimizou o recall do nosso classificador.
