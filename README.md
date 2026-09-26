@@ -1,12 +1,13 @@
 # deteccao-fraudes-python
-# Projeto do Curso "Analise de dados com Python: da preparação à aplicação com segurança", do bootcamp "Bradesco: GenAI, Dados e Cyber".
-# Detecção de Anomalias em Transações de Cartão de Crédito
+#### Projeto do Curso "Analise de dados com Python: da preparação à aplicação com segurança", do bootcamp "Bradesco: GenAI, Dados e Cyber".
 
-## 🎯 O Problema do Desbalanceamento
+## Detecção de Anomalias em Transações de Cartão de Crédito
+
+## O Problema do Desbalanceamento
 
 Nota-se que há um número muito pequeno de transações que são fraudulentas, em comparação com o total. Treinar um modelo com os dados sem um tratamento prévio poderá levar a erros, como ignorar operações as fraudulentas (representadas por "1" na última coluna). Neste caso, teremos um modelo que não identifica as fraudes. Precisamos utilizar métricas e tratamentos específicos. Focamos nas métricas de **Recall** (capacidade de detectar fraudes) e **Precisão**.
 
-## 🛠️ Preparação dos Dados
+## Preparação dos Dados
 
 Os passos abaixo foram seguidos na prepação dos dados:
 
@@ -18,7 +19,7 @@ Os passos abaixo foram seguidos na prepação dos dados:
 
 
 
-## 📊 Comparação de Modelos e Desempenho
+## Comparação de Modelos e Desempenho
 
 Evolução da detecção focando na classe de fraude (Classe 1):
 
@@ -32,7 +33,7 @@ Evolução da detecção focando na classe de fraude (Classe 1):
 > 
 > 
 
-## ⚙️ Limiar de Decisão e Auditoria com SHAP
+## Limiar de Decisão e Auditoria com SHAP
 
 * **O Limiar (Threshold):** Em um de nossos pipelines, ajustamos manualmente o limiar de decisão para **0.3** (`threshold = 0.3`). A análise gráfica confirmou que ao flexibilizar o limiar para capturar mais fraudes (maior Recall), a precisão cai, e o modelo começa a sinalizar transações legítimas como suspeitas (Falso Positivo).
 
