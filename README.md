@@ -3,6 +3,8 @@
 
 ## Detecção de Anomalias em Transações de Cartão de Crédito
 
+Neste projeto, treinamos uma IA para o reconhecimento de transações fraudulentas a partir de anomalias encontradas nestas operações, em comparação com transações legítimas.
+
 ## O Problema do Desbalanceamento
 
 Nota-se que há um número muito pequeno de transações que são fraudulentas, em comparação com o total. Treinar um modelo com os dados sem um tratamento prévio poderá levar a erros, como ignorar operações as fraudulentas (representadas por "1" na última coluna). Neste caso, teremos um modelo que não identifica as fraudes. Precisamos utilizar métricas e tratamentos específicos. Focamos nas métricas de **Recall** (capacidade de detectar fraudes) e **Precisão**.
